@@ -5,7 +5,7 @@
     font-weight: bold;
     position: fixed;
     left: 20px; /* Adjust the left position as needed */
-    bottom: 220px; /* Adjust the bottom position to the lower left corner */
+    bottom: 20px;
     transform: translateY(0%);
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
@@ -17,59 +17,65 @@
     font-weight: bold;
     position: fixed;
     left: 20px; /* Adjust the left position as needed */
-    bottom: 180px; /* Adjust the bottom position to the lower left corner */
+    bottom: 70px;
     transform: translateY(0%);
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-/* lika's birthday */
+/* Lika's birthday */
 .pretty-link:nth-child(3) {
     color: rgb(226, 226, 236);
     text-decoration: none;
     font-weight: bold;
     position: fixed;
     left: 20px; /* Adjust the left position as needed */
-    bottom: 140px; /* Adjust the bottom position to the lower left corner */
+    bottom: 120px;
     transform: translateY(0%);
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-/* gio's birthday */
+/* Gio's birthday */
 .pretty-link:nth-child(4) {
     color: rgb(226, 226, 236);
     text-decoration: none;
     font-weight: bold;
     position: fixed;
     left: 20px; /* Adjust the left position as needed */
-    bottom: 100px; /* Adjust the bottom position to the lower left corner */
+    bottom: 170px;
     transform: translateY(0%);
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-/* data's birthday */
+/* Data's birthday */
 .pretty-link:nth-child(5) {
     color: rgb(226, 226, 236);
     text-decoration: none;
     font-weight: bold;
     position: fixed;
     left: 20px; /* Adjust the left position as needed */
-    bottom: 60px; /* Adjust the bottom position to the lower left corner */
+    bottom: 220px;
     transform: translateY(0%);
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
-/* ika's birthday */
+/* Ika's birthday */
 .pretty-link:nth-child(6) {
     color: rgb(226, 226, 236);
     text-decoration: none;
     font-weight: bold;
     position: fixed;
     left: 20px; /* Adjust the left position as needed */
-    bottom: 20px; /* Adjust the bottom position to the lower left corner */
+    bottom: 270px;
     transform: translateY(0%);
     transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
+/* Change the color on hover for all links */
 .pretty-link:hover {
-    color: rgb(32, 215, 81); /* Change the color on hover */
+    color: rgb(32, 215, 81);
+}
+
+/* Adjust the position for the last link */
+.pretty-link:last-child {
+    bottom: 320px; /* Adjust the bottom position for the last link */
 }
