@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>data's Page</title>
+     <link rel="stylesheet" type="text/css" href="styles.css">
+     <link rel="stylesheet" type="text/css" href="custom.css">
+    </style>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FF6B6B, #FFCC00, #007BFF,#007BFF, #00BFFF);
+
+          }
+          
+</style>
+</head>
+<body>
+    <div class="countdown-container">
+        <span id="days_left"></span> დღე,
+        <span id="hours_left"></span> სათი,
+        <span id="minutes_left"></span> წუთი, და
+        <span id="seconds_left"></span> წამი დარჩა.
+    </div>
+    <div class="left-button">
+        <a href="data_page.html" class="pretty-link">ნახე Data's Birthday</a>
+        <a href="mari_page.html" class="pretty-link">ნახე Mari's Birthday</a>
+        <a href="lika_page.html" class="pretty-link">ნახე Lika's Birthday</a>
+        <a href="ika_page.html" class="pretty-link">ნახე Ika's Birthday</a>
+        <a href="gio_page.html" class="pretty-link">ნახე Gio's Birthday</a>
+        <a href="countdown.html" class="pretty-link">ნახე anis's Birthday</a>
+    <script>
+        function updateCountdown() {
+            var targetDate = new Date("2024-03-20T00:00:00Z"); // Set your target date here
+            targetDate.setHours(targetDate.getHours() + -4); // Adjust the target date to UTC+4 (Tbilisi time)
+            var currentDate = new Date();
+        
+            var timeLeft = targetDate - currentDate;
+        
+            var daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            var hoursLeft = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            var secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        
+            document.getElementById("days_left").innerHTML = daysLeft;
+            document.getElementById("hours_left").innerHTML = hoursLeft;
+            document.getElementById("minutes_left").innerHTML = minutesLeft;
+            document.getElementById("seconds_left").innerHTML = secondsLeft;
+        
+            if (timeLeft <= 0) {
+                // Optionally, you can display a message or take some action when the countdown reaches zero.
+                document.getElementById("countdown").innerHTML = "Countdown expired!";
+            }
+        }
+
+        // Update the countdown every second (1000 milliseconds)
+        setInterval(updateCountdown, 1000);
+
+        // Initial update to set the countdown when the page loads
+        updateCountdown();
+    </script>
+    <section class="container">
+        <div class="slider-wrapper">
+            <div class="slider">
+                <img id="slide-1" src="lui.jpg" alt="data"/>
+                <img id="slide-2" src="lui1.jpg" alt="data"/>
+                <img id="slide-3" src="lui2.jpg" alt="data"/>
+                       
+            </div>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+
+            </div>
+            <link rel="stylesheet" type="text/css" href="styles.css">
+        </head>
+        <body>
+    </section>
+    </div>
+</body>
+</html>
