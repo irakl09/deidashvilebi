@@ -53,7 +53,7 @@
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background-color: #013f09;
+    background-color: #3cf427;
     opacity: 0.75;
     transition: opacity ease 250ms;
 }
@@ -99,4 +99,29 @@
 .facebook-logo {
     margin-left: auto;
     margin-right: 19px;
+}
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply styles to your container */
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab,);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+/* Define the keyframe animation */
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
