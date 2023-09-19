@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <title>lui's Page</title>
-     <link rel="stylesheet" type="text/css" href="styles.css">
      <link rel="stylesheet" type="text/css" href="custom.css">
     </style>
     <style>
@@ -9,16 +8,340 @@
             background: linear-gradient(to bottom, #FF6B6B, #FFCC00, #007BFF,#007BFF, #00BFFF);
 
           }
+          margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #0f2027;
+            background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            overflow: hidden;
+        }
+
+        .scope {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: slid 30s linear infinite;
+        }
+
+        .scope span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+        }
+
+        .scope span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: 2s;
+        }
+
+        .scope span:hover img {
+            transform: translateY(-50px) scale(1.7);
+        }
+
+        @keyframes slid {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+          @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+
+          $font: 'Lato', sans-serif;
+          $big: 'Montserrat', sans-serif;
           
+          $red: #EF2F3C;
+          $white: #F6F4F3;
+          $blue: #276FBF;
+          $dark: #183059;
+          $yellow: #F0A202;
+          
+          $star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            
+          html {
+            display: grid;
+            min-height: 100%;
+          }
+          
+          body {
+            display: grid;
+            background: $dark;
+          }
+          
+          .container {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            width: 650px;
+            height: 480px;
+          }
+          
+          h1 {
+            font-family: $font;
+            text-align: center;
+            margin-top: 2em;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: $white;
+          }
+          
+          #timer {
+            color: $white;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $font;
+            font-size: .7em;
+            letter-spacing: 5px;
+            margin-top: 25%;
+          }
+          
+          .days, .hours, .minutes, .seconds {
+            display: inline-block;
+            padding: 20px;
+            width: 100px;
+            border-radius: 5px;
+          }
+          
+          .days {
+            background: $red;
+          }
+          
+          .hours {
+            background: $white;
+            color: $dark;
+          }
+          
+          .minutes {
+            background: $blue;
+          }
+          
+          .seconds {
+            background: $yellow;
+            .numbers {
+             
+            }
+          }
+          
+          .numbers {
+            font-family: $big;
+            color: $dark;
+            font-size: 4em;
+          }
+          
+          .white {
+            position: absolute;
+            background: $white;
+            height: 85px;
+            width: 75px;
+            left: 30%;
+            top: 2%;
+            .triangle {
+              border-bottom: 14px solid $white;
+            }
+            .string {
+              background: $white;
+              border: 1px solid $white;
+            }
+          }
+          
+          .red {
+            position: absolute;
+            background: $red;
+            left: 18%;
+            top: 9%;
+            height: 65px;
+            width: 70px;
+            .triangle {
+              border-bottom: 14px solid $red;
+            }
+            .string {
+              background: $red;
+              border: 1px solid $red;
+            }
+          }
+          
+          .blue {
+            position: absolute;
+            background: $blue;
+            height: 80px;
+            width: 80px;
+            left: 60%;
+            top: 5%;
+            .triangle {
+              border-bottom: 14px solid $blue;
+            }
+            .string {
+              background: $blue;
+              border: 1px solid $blue;
+            }
+          }
+          
+          .balloon {
+            border: 1px solid #000;
+            border-radius: 50% 50% 50% 50%/ 40% 40% 60% 60%;
+            z-index: 2;
+          }
+          
+          .eye {
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            top: 40%;
+            left: 22%;
+            background: #000;
+            border-radius: 50%;
+            &:after {
+              content: '';
+              left: 35px;
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background: #000;
+              position: absolute;
+            }
+          }
+          
+          .mouth {
+            position:absolute;
+            top: 45%;
+            left: 43%;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+          }
+          
+          .happy {
+            border: 2px solid;
+            border-color: transparent #000 #000 transparent;
+            transform: rotate(45deg);
+          }
+          
+          .triangle {
+            position: absolute;
+            left: 40%;
+            bottom: -10%;
+            width: 0;
+              height: 0;
+              border-left: 7px solid transparent;
+              border-right: 7px solid transparent;
+          }
+          
+          .string {
+            position: absolute;
+            height: 70px;
+            width: 1px;
+            left: 48%;
+            top: 100%;
+            z-index: -1;
+          }
+          
+          .star {
+            width: 20px;
+            height: 20px;
+            background: $white;
+            -webkit-clip-path: $star;
+            clip-path: $star;
+          }
+          
+          .star-red {
+            width: 30px;
+            height: 30px;
+            margin-left: 51px;
+            margin-top: -5px;
+            background: $red;
+            -webkit-clip-path: $star;
+            clip-path: $star;
+          }
+          
+          footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-transform: uppercase;
+            padding: 10px;
+            font-family: $font;
+            font-size: 0.7em;
+            p {
+              letter-spacing: 3px;
+              color: $red;
+            }
+            a {
+              color: $white;
+              text-decoration: none;
+              &:hover {
+                color: $blue;
+              }
+            }
+          } 
 </style>
 </head>
 <body>
-    <div class="countdown-container">
-        <span id="days_left"></span> დღე,
-        <span id="hours_left"></span> სათი,
-        <span id="minutes_left"></span> წუთი, და
-        <span id="seconds_left"></span> წამი დარჩა.
+   <div class="scope">
+            <span style="--i:1;"><img src="n.jpg" alt="Image 1"></span>
+            <span style="--i:2;"><img src="lui.jpg" alt="Image 2"></span>
+            <span style="--i:3;"><img src="m3.jpg" alt="Image 3"></span>
+            <span style="--i:4;"><img src="lu1.jpg" alt="Image 4"></span>
+            <span style="--i:5;"><img src="lu2.jpg" alt="Image 5"></span>
+            <span style="--i:6;"><img src="lu3.jpg" alt="Image 6"></span>
+            <span style="--i:7;"><img src="lu4.jpg" alt="Image 7"></span>
+            <span style="--i:8;"><img src="lu5.jpg" alt="Image 8"></span>
+     </div>      
     </div>
+    <div class="container">
+        <div class="balloon white">
+          <div class="star-red"></div>
+        <div class="face">
+          <div class="eye"></div>
+          <div class="mouth happy"></div>
+        </div>
+        <div class="triangle"></div>
+        <div class="string"></div>
+      </div>
+      
+      <div class="balloon red">
+        <div class="star"></div>
+        <div class="face">
+          <div class="eye"></div>
+          <div class="mouth happy"></div>
+        </div>
+        <div class="triangle"></div>
+        <div class="string"></div>
+      </div>
+      
+      <div class="balloon blue">
+        <div class="star"></div>
+        <div class="face">
+          <div class="eye"></div>
+          <div class="mouth happy"></div>
+        </div>
+        <div class="triangle"></div>
+        <div class="string"></div>
+      </div>
+        <div id="timer"></div>
+        <h1>20 მარტი</h1>
+      </div>
     <div class="left-button">
         <a href="data_page.html" class="pretty-link">ნახე Data's Birthday</a>
         <a href="mari_page.html" class="pretty-link">ნახე Mari's Birthday</a>
@@ -27,50 +350,44 @@
         <a href="gio_page.html" class="pretty-link">ნახე Gio's Birthday</a>
         <a href="countdown.html" class="pretty-link">ნახე anis's Birthday</a>
     <script>
-        function updateCountdown() {
-            var targetDate = new Date("2024-03-20T00:00:00Z"); // Set your target date here
-            targetDate.setHours(targetDate.getHours() + -4); // Adjust the target date to UTC+4 (Tbilisi time)
-            var currentDate = new Date();
-        
-            var timeLeft = targetDate - currentDate;
-        
-            var daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            var hoursLeft = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            var secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
-        
-            document.getElementById("days_left").innerHTML = daysLeft;
-            document.getElementById("hours_left").innerHTML = hoursLeft;
-            document.getElementById("minutes_left").innerHTML = minutesLeft;
-            document.getElementById("seconds_left").innerHTML = secondsLeft;
-        
-            if (timeLeft <= 0) {
-                // Optionally, you can display a message or take some action when the countdown reaches zero.
-                document.getElementById("countdown").innerHTML = "Countdown expired!";
-            }
-        }
+        const year = new Date().getFullYear();
+const fourthOfJuly = new Date(year, 3,20).getTime();
+const fourthOfJulyNextYear = new Date(year + 1, 3, 20).getTime();
+const month = new Date().getMonth();
 
-        // Update the countdown every second (1000 milliseconds)
-        setInterval(updateCountdown, 1000);
+// countdown
+let timer = setInterval(function() {
 
-        // Initial update to set the countdown when the page loads
-        updateCountdown();
+  // get today's date
+  const today = new Date().getTime();
+
+  // get the difference
+  let diff;
+  if(month > 6) {
+    diff = fourthOfJulyNextYear - today;
+  } else {
+    diff = fourthOfJuly - today;
+  }
+  // math
+  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  // display
+  document.getElementById("timer").innerHTML =
+    "<div class=\"days\"> \
+  <div class=\"numbers\">" + days + "</div>დღე</div> \
+<div class=\"hours\"> \
+  <div class=\"numbers\">" + hours + "</div>სათი</div> \
+<div class=\"minutes\"> \
+  <div class=\"numbers\">" + minutes + "</div>წუთი</div> \
+<div class=\"seconds\"> \
+  <div class=\"numbers\">" + seconds + "</div>წამი</div> \
+</div>";
+
+}, 1000);
     </script>
-    <section class="container">
-        <div class="slider-wrapper">
-            <div class="slider">
-                <img id="slide-1" src="lui.jpg" alt="data"/>
-                <img id="slide-2" src="lui1.jpg" alt="data"/>
-                <img id="slide-3" src="lui2.jpg" alt="data"/>
-                       
-            </div>
-            <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-
-            </div>
-            <link rel="stylesheet" type="text/css" href="styles.css">
         </head>
         <body>
     </section>
