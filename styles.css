@@ -1,46 +1,52 @@
-
 /* Default link container styles */
-.left-button {
-  display: inline-block; /* Links will appear next to each other */
+.link-container {
+  display: flex; /* Use flexbox to make the divs appear in a horizontal line */
+  gap: 5px; /* Add space between the divs */
 }
 
 /* Default link styles */
+.left-button {
+  /* Styles for each link div */
+  flex: 1; /* Distribute available space evenly among the link divs */
+  text-align: center; /* Center the link content horizontally */
+}
+
 .left-button a {
-  display: block; /* Each link will be in its own frame */
-  margin-bottom: 2px; /* Adds space between the links */
-  text-decoration: none; /* Removes underline from links */
-  color: #333; /* Sets the default link color */
-  padding: 1px; /* Add padding inside each link frame */
-  background-image: radial-gradient(circle at 50% 50%, #007bff, #ff5733); /* Gradient background for each link */
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 1px;
+  background-image: radial-gradient(circle at 50% 50%, #007bff, #ff5733);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions for background and color */
-  animation: colorChange 4s infinite alternate; /* Animation to change background colors every 4 seconds */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  animation: colorChange 4s infinite alternate;
 }
 
 /* Link hover styles */
-.left-button a:hover {
-  color: #007bff; /* Sets the link color on hover */
-  text-decoration: underline; /* Underline the link on hover */
-  animation: none; /* Disable the animation on hover */
+.left-button:hover a {
+  color: #007bff;
+  text-decoration: underline;
+  animation: none;
 }
 
 /* Link click styles */
 .left-button a:active {
-  color: #ff5733; /* Sets the link color when clicked */
+  color: #ff5733;
 }
 
 @keyframes colorChange {
   0% {
-    background-image: radial-gradient(circle at 50% 50%, #007bff, #ff5733); /* Initial gradient */
+    background-image: radial-gradient(circle at 50% 50%, #007bff, #ff5733);
   }
   50% {
-    background-image: radial-gradient(circle at 50% 50%, #ff5733, #ffdb58); /* Yellow to red gradient */
+    background-image: radial-gradient(circle at 50% 50%, #ff5733, #ffdb58);
   }
   100% {
-    background-image: radial-gradient(circle at 50% 50%, #ff5733, #ff0000); /* Red to red gradient */
+    background-image: radial-gradient(circle at 50% 50%, #ff5733, #ff0000);
   }
 }
+
 
 
 /* Change the color on hover for all links */
