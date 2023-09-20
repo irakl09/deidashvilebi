@@ -1,75 +1,47 @@
-/* Your existing CSS code */
-/* ani's birthday */
-.pretty-link:nth-child(1) {
-  color: rgb(226, 226, 236);
-  text-decoration: none;
-  font-weight: bold;
-  position: fixed;
-  left: 20px; /* Adjust the left position as needed */
-  bottom: 20px;
-  transform: translateY(0%);
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+
+/* Default link container styles */
+.left-button {
+  display: inline-block; /* Links will appear next to each other */
 }
 
-/* Mari's birthday */
-.pretty-link:nth-child(2) {
-  color: rgb(226, 226, 236);
-  text-decoration: none;
-  font-weight: bold;
-  position: fixed;
-  left: 20px; /* Adjust the left position as needed */
-  bottom: 70px;
-  transform: translateY(0%);
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+/* Default link styles */
+.left-button a {
+  display: block; /* Each link will be in its own frame */
+  margin-bottom: 2px; /* Adds space between the links */
+  text-decoration: none; /* Removes underline from links */
+  color: #333; /* Sets the default link color */
+  padding: 1px; /* Add padding inside each link frame */
+  background-image: radial-gradient(circle at 50% 50%, #007bff, #ff5733); /* Gradient background for each link */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions for background and color */
+  animation: colorChange 4s infinite alternate; /* Animation to change background colors every 4 seconds */
 }
 
-/* Lika's birthday */
-.pretty-link:nth-child(3) {
-  color: rgb(226, 226, 236);
-  text-decoration: none;
-  font-weight: bold;
-  position: fixed;
-  left: 20px; /* Adjust the left position as needed */
-  bottom: 120px;
-  transform: translateY(0%);
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+/* Link hover styles */
+.left-button a:hover {
+  color: #007bff; /* Sets the link color on hover */
+  text-decoration: underline; /* Underline the link on hover */
+  animation: none; /* Disable the animation on hover */
 }
 
-/* Gio's birthday */
-.pretty-link:nth-child(4) {
-  color: rgb(226, 226, 236);
-  text-decoration: none;
-  font-weight: bold;
-  position: fixed;
-  left: 20px; /* Adjust the left position as needed */
-  bottom: 170px;
-  transform: translateY(0%);
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+/* Link click styles */
+.left-button a:active {
+  color: #ff5733; /* Sets the link color when clicked */
 }
 
-/* Data's birthday */
-.pretty-link:nth-child(5) {
-  color: rgb(226, 226, 236);
-  text-decoration: none;
-  font-weight: bold;
-  position: fixed;
-  left: 20px; /* Adjust the left position as needed */
-  bottom: 220px;
-  transform: translateY(0%);
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+@keyframes colorChange {
+  0% {
+    background-image: radial-gradient(circle at 50% 50%, #007bff, #ff5733); /* Initial gradient */
+  }
+  50% {
+    background-image: radial-gradient(circle at 50% 50%, #ff5733, #ffdb58); /* Yellow to red gradient */
+  }
+  100% {
+    background-image: radial-gradient(circle at 50% 50%, #ff5733, #ff0000); /* Red to red gradient */
+  }
 }
 
-/* Ika's birthday */
-.pretty-link:nth-child(6) {
-  color: rgb(37, 37, 255);
-  text-decoration: none;
-  font-weight: bold;
-  position: fixed;
-  left: 20px; /* Adjust the left position as needed */
-  bottom: 270px;
-  transform: translateY(0%);
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-}
 
 /* Change the color on hover for all links */
 .pretty-link:hover {
