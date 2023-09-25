@@ -237,6 +237,27 @@
             }
           }
         } 
+        /* Position the audio container and button on the upper-left corner */
+        #audio-container {
+            position: fixed;
+            top: 200px; /* Adjust the top position as needed */
+            left: 415px; /* Adjust the left position as needed */
+        }
+        
+        /* Style the toggle button */
+        #toggle-button {
+            font-size: 30px;
+            padding: 25px 40px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth color transition */
+            top: 30px; /* Adjust the top position as needed */
+        }
+        
+        /* Style the audio player if needed */
+        audio {
+            width: 100%;
+            max-width: 400px;
+        }
 </style>
 </head>
 <body>
@@ -291,6 +312,48 @@
         <a href="data_page.html" class="pretty-link">ნახე data's Birthday</a>
         <a href="countdown.html" class="pretty-link">ნახე anis's Birthday</a>
     </div>
+    <div id="audio-container">
+      <audio id="audio-player">
+        <source src="505.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <button id="toggle-button" style="background-color: blue; color: white;">Play</button>
+    </div>
+  
+    <script>
+      const audioPlayer = document.getElementById('audio-player');
+      const toggleButton = document.getElementById('toggle-button');
+      let isBlue = true;
+  
+      toggleButton.addEventListener('click', () => {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          toggleButton.textContent = 'Pause';
+          // Clear the color-changing interval when the button is clicked
+          clearInterval(colorChangeInterval);
+        } else {
+          audioPlayer.pause();
+          toggleButton.textContent = 'Play';
+          // Restart the color-changing interval when the button is paused
+          colorChangeInterval = setInterval(changeButtonColor, 2000);
+        }
+      });
+  
+      // Function to change the button color between blue and white
+      function changeButtonColor() {
+        if (isBlue) {
+          toggleButton.style.backgroundColor = 'yellow';
+          toggleButton.style.color = 'purple';
+        } else {
+          toggleButton.style.backgroundColor = 'purple';
+          toggleButton.style.color = 'yellow';
+        }
+        isBlue = !isBlue;
+      }
+  
+      // Initialize the color-changing interval
+      let colorChangeInterval = setInterval(changeButtonColor, 2000);
+    </script> 
     <script> 
     // Function to display the countdown timer
     function updateTimer() {
