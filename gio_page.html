@@ -1,411 +1,161 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>gio's Page</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="custom.css">
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჯარი</title>
     <style>
         body {
-            background: linear-gradient(to bottom, #333333,#006400, #00008B);
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
-        @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
-
-        $font: 'Lato', sans-serif;
-        $big: 'Montserrat', sans-serif;
-        
-        $red: #EF2F3C;
-        $white: #F6F4F3;
-        $blue: #276FBF;
-        $dark: #183059;
-        $yellow: #F0A202;
-        
-        $star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-          
-        html {
-          display: grid;
-          min-height: 100%;
-        }
-        
-        body {
-          display: grid;
-          background: $dark;
-        }
-        
-        .container {
-          position: relative;
-          margin: auto;
-          overflow: hidden;
-          width: 650px;
-          height: 480px;
-        }
-        
-        h1 {
-          font-family: $font;
-          text-align: center;
-          margin-top: 2em;
-          font-size: 1em;
-          text-transform: uppercase;
-          letter-spacing: 5px;
-          color: $white;
-        }
-        
-        #timer {
-          color: $white;
-          text-align: center;
-          text-transform: uppercase;
-          font-family: $font;
-          font-size: .7em;
-          letter-spacing: 5px;
-          margin-top: 25%;
-        }
-        
-        .days, .hours, .minutes, .seconds {
-          display: inline-block;
-          padding: 20px;
-          width: 100px;
-          border-radius: 5px;
-        }
-        
-        .days {
-          background: $red;
-        }
-        
-        .hours {
-          background: $white;
-          color: $dark;
-        }
-        
-        .minutes {
-          background: $blue;
-        }
-        
-        .seconds {
-          background: $yellow;
-          .numbers {
-           
-          }
-        }
-        
-        .numbers {
-          font-family: $big;
-          color: $dark;
-          font-size: 4em;
-        }
-        
-        .white {
-          position: absolute;
-          background: $white;
-          height: 85px;
-          width: 75px;
-          left: 30%;
-          top: 2%;
-          .triangle {
-            border-bottom: 14px solid $white;
-          }
-          .string {
-            background: $white;
-            border: 1px solid $white;
-          }
-        }
-        
-        .red {
-          position: absolute;
-          background: $red;
-          left: 18%;
-          top: 9%;
-          height: 65px;
-          width: 70px;
-          .triangle {
-            border-bottom: 14px solid $red;
-          }
-          .string {
-            background: $red;
-            border: 1px solid $red;
-          }
-        }
-        
-        .blue {
-          position: absolute;
-          background: $blue;
-          height: 80px;
-          width: 80px;
-          left: 60%;
-          top: 5%;
-          .triangle {
-            border-bottom: 14px solid $blue;
-          }
-          .string {
-            background: $blue;
-            border: 1px solid $blue;
-          }
-        }
-        
-        .balloon {
-          border: 1px solid #000;
-          border-radius: 50% 50% 50% 50%/ 40% 40% 60% 60%;
-          z-index: 2;
-        }
-        
-        .eye {
-          position: absolute;
-          width: 7px;
-          height: 7px;
-          top: 40%;
-          left: 22%;
-          background: #000;
-          border-radius: 50%;
-          &:after {
-            content: '';
-            left: 35px;
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #000;
-            position: absolute;
-          }
-        }
-        
-        .mouth {
-          position:absolute;
-          top: 45%;
-          left: 43%;
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-        }
-        
-        .happy {
-          border: 2px solid;
-          border-color: transparent #000 #000 transparent;
-          transform: rotate(45deg);
-        }
-        
-        .triangle {
-          position: absolute;
-          left: 40%;
-          bottom: -10%;
-          width: 0;
-            height: 0;
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-        }
-        
-        .string {
-          position: absolute;
-          height: 70px;
-          width: 1px;
-          left: 48%;
-          top: 100%;
-          z-index: -1;
-        }
-        
-        .star {
-          width: 20px;
-          height: 20px;
-          background: $white;
-          -webkit-clip-path: $star;
-          clip-path: $star;
-        }
-        
-        .star-red {
-          width: 30px;
-          height: 30px;
-          margin-left: 51px;
-          margin-top: -5px;
-          background: $red;
-          -webkit-clip-path: $star;
-          clip-path: $star;
-        }
-        
-        footer {
-          position: fixed;
-          bottom: 0;
-          right: 0;
-          text-transform: uppercase;
-          padding: 10px;
-          font-family: $font;
-          font-size: 0.7em;
-          p {
-            letter-spacing: 3px;
-            color: $red;
-          }
-          a {
-            color: $white;
-            text-decoration: none;
-            &:hover {
-              color: $blue;
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                /* Background gradient */
+                background: linear-gradient(to bottom, #FFFFFF, #006400, #00008B);
             }
-          }
-        } 
-      #audio-container {
-          position: fixed;
-          top: 250px; /* Adjust the top position as needed */
-          left: 780px; /* Adjust the left position as needed */
-      }
-        
-        /* Style the toggle button */
-        #toggle-button {
-            font-size: 30px;
-            padding: 25px 40px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Smooth color transition */
-            top: 30px; /* Adjust the top position as needed */
+    
+            .calendar {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+        h1 {
+            color: #333;
         }
-        
+
+        #calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+
+        .date-cell {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .green {
+            background-color: green;
+            color: white;
+        }
+
+        #greenCount {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        /* Position the audio container and button on the upper-left corner */
+        #audio-container {
+            position: fixed;
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed */
+        }
+
+        /* Style the toggle button with neon light effect */
+        #toggle-button {
+            font-size: 16px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #333; /* Background color for the neon effect */
+            color: green; /* Text color for the neon effect */
+            text-shadow: 10px 20px 100px rgba(0, 0, 500, 0.8); /* Neon glow effect */
+            box-shadow: 1px 1px 10px rgba(0, 0, 255, 0.8); /* Neon glow effect */
+        }
+
         /* Style the audio player if needed */
         audio {
             width: 100%;
             max-width: 400px;
         }
-</style>
+    </style>
 </head>
 <body>
-    <div class="scope">
-        <span style="--i:1;"><img src="gi.jpg" alt="Image 1"></span>
-        <span style="--i:2;"><img src="gi1.jpg" alt="Image 2"></span>
-        <span style="--i:3;"><img src="gi2.jpg" alt="Image 3"></span>
-        <span style="--i:4;"><img src="gi3.jpg" alt="Image 4"></span>
-        <span style="--i:5;"><img src="gi4.jpg" alt="Image 5"></span>
-        <span style="--i:6;"><img src="gi5.jpg" alt="Image 6"></span>
-        <span style="--i:7;"><img src="gi6.jpg" alt="Image 7"></span>
-        <span style="--i:8;"><img src="gi7.jpg" alt="Image 8"></span>
-    </div>     
-    <div class="container">
-        <div class="balloon white">
-          <div class="star-red"></div>
-        <div class="face">
-          <div class="eye"></div>
-          <div class="mouth happy"></div>
-        </div>
-        <div class="triangle"></div>
-        <div class="string"></div>
-      </div>
-      
-      <div class="balloon red">
-        <div class="star"></div>
-        <div class="face">
-          <div class="eye"></div>
-          <div class="mouth happy"></div>
-        </div>
-        <div class="triangle"></div>
-        <div class="string"></div>
-      </div>
-      
-      <div class="balloon blue">
-        <div class="star"></div>
-        <div class="face">
-          <div class="eye"></div>
-          <div class="mouth happy"></div>
-        </div>
-        <div class="triangle"></div>
-        <div class="string"></div>
-      </div>
-        <div id="timer"></div>
-        <h1>12 იანვარი</h1>
-      </div>
-    <div class="left-button">
-        <a href="lika_page.html" class="pretty-link">ნახე Lika's Birthday</a>
-        <a href="mari_page.html" class="pretty-link">ნახე Mari's Birthday</a>
-        <a href="ika_page.html" class="pretty-link">ნახე  ika's Birthday</a>
-        <a href="data_page.html" class="pretty-link">ნახე data's Birthday</a>
-        <a href="countdown.html" class="pretty-link">ნახე anis's Birthday</a>
-        <a href="newyear.html" class="pretty-link">ნახე ახალი წელი</a>
-    </div>
-    <div id="audio-container">
-      <audio id="audio-player">
-        <source src="gg.mp3" type="audio/mpeg">
+<div class="calendar">
+    <h1>ჯარის განრიგი</h1>
+    <div id="calendar"></div>
+    <div id="greenCount">დარჩენილი მსახურობის დრო: <span id="count">0</span></div>
+</div>
+<div id="audio-container">
+    <audio id="audio-player">
+        <source src="bz.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
-      <button id="toggle-button" style="background-color: blue; color: white;">Play</button>
-    </div>
-  
-    <script>
-      const audioPlayer = document.getElementById('audio-player');
-      const toggleButton = document.getElementById('toggle-button');
-      let isBlue = true;
-  
-      toggleButton.addEventListener('click', () => {
+    </audio>
+    <button id="toggle-button">Play</button>
+</div>
+<script>
+    const audioPlayer = document.getElementById('audio-player');
+    const toggleButton = document.getElementById('toggle-button');
+    let isBlue = true;
+    let colorChangeInterval; // Declare the variable here
+
+    toggleButton.addEventListener('click', () => {
         if (audioPlayer.paused) {
-          audioPlayer.play();
-          toggleButton.textContent = 'Pause';
-          // Clear the color-changing interval when the button is clicked
-          clearInterval(colorChangeInterval);
+            audioPlayer.play();
+            toggleButton.textContent = 'Pause';
+            // Clear the color-changing interval when the button is clicked
+            clearInterval(colorChangeInterval);
         } else {
-          audioPlayer.pause();
-          toggleButton.textContent = 'Play';
-          // Restart the color-changing interval when the button is paused
-          colorChangeInterval = setInterval(changeButtonColor, 2000);
+            audioPlayer.pause();
+            toggleButton.textContent = 'Play';
+            // Restart the color-changing interval when the button is paused
+            colorChangeInterval = setInterval(changeButtonColor, 2000);
         }
-      });
-  
-      // Function to change the button color between blue and white
-      function changeButtonColor() {
+    });
+
+    // Function to change the button color between blue and white
+    function changeButtonColor() {
         if (isBlue) {
-          toggleButton.style.backgroundColor = 'black';
-          toggleButton.style.color = 'blue';
+            toggleButton.style.backgroundColor = 'yellow';
+            toggleButton.style.color = 'blue';
         } else {
-          toggleButton.style.backgroundColor = 'blue';
-          toggleButton.style.color = 'black';
+            toggleButton.style.backgroundColor = 'blue';
+            toggleButton.style.color = 'yellow';
         }
         isBlue = !isBlue;
-      }
-  
-      // Initialize the color-changing interval
-      let colorChangeInterval = setInterval(changeButtonColor, 2000);
-    </script> 
-    <script> 
-    // Function to display the countdown timer
-    function updateTimer() {
-      const targetDate = new Date("2024-01-12T00:00:00Z"); // June 9, 2024, 00:00:00 in UTC-4
-      targetDate.setHours(targetDate.getHours() - 4); // Adjust the target date to UTC-4 (Tbilisi time)
-      const now = new Date();
-
-
-
-      // Calculate the time difference in milliseconds
-      const diff = targetDate - now;
-
-      if (diff <= 0) {
-        // The countdown has ended
-        document.getElementById("timer").innerHTML = "Countdown Ended";
-        clearInterval(timer);
-        return;
-      }
-
-      // Calculate days, hours, minutes, and seconds
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      // Display the countdown
-      document.getElementById("timer").innerHTML =
-        `<div class="days"> \
-          <div class="numbers">${days}</div>დღე</div> \
-        <div class="hours"> \
-          <div class="numbers">${hours}</div>სათი</div> \
-        <div class="minutes"> \
-          <div class="numbers">${minutes}</div>წუთი</div> \
-        <div class="seconds"> \
-          <div class="numbers">${seconds}</div>წამი</div>`;
     }
 
-    // Update the timer immediately and then at 1-second intervals
-    updateTimer();
-    const timer = setInterval(updateTimer, 1000);
-  </script>   
-        </head>
-        <body>
-    </section>
-    <!-- Container for social media icons -->
-    <div class="social-icons-container">
-      <a href="https://www.instagram.com/giorgi.bagashvili.961/?igshid=MzRlODBiNWFlZA==&fbclid=IwAR3tpl-mv5Bi9jNpywHOFNfKtYA1HXS_K7uJMP9pNNh-LHKyhykMxURe4OQ/" class="social-logo instagram-logo">
-          <img src="insta.gif" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/giorgi.bagashvili.961/photos/" class="social-logo facebook-logo">
-          <img src="fb.gif" alt="Facebook">
-          <link rel="stylesheet" type="text/css" href="{% static 'css/social-icons.css' %}">
-      </a>
-  </div>
+    // Initialize the color-changing interval
+    colorChangeInterval = setInterval(changeButtonColor, 2000);
+</script>
+<script>
+    function generateCalendar() {
+        const calendarContainer = document.getElementById("calendar");
+        const countElement = document.getElementById("count");
+        const startDate = new Date("2023-10-01");
+        const endDate = new Date("2024-06-06");
+
+        let currentDate = startDate;
+        let greenCount = 0;
+        let dayCount = 0;
+
+        while (currentDate <= endDate) {
+            const dateCell = document.createElement("div");
+            dateCell.classList.add("date-cell");
+
+            if (dayCount === 0 || dayCount % 3 === 0) {
+                dateCell.classList.add("green");
+                greenCount++;
+            }
+
+            dateCell.innerText = currentDate.toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "short",
+            });
+
+            calendarContainer.appendChild(dateCell);
+            currentDate.setDate(currentDate.getDate() + 1);
+            dayCount++;
+        }
+
+        countElement.textContent = greenCount;
+    }
+
+    // Generate the calendar and update the green count
+    generateCalendar();
+</script>
 </body>
 </html>
