@@ -237,27 +237,69 @@
             }
           }
         } 
-       /* Position the audio container and button on the upper-left corner */
-      #audio-container {
-          position: fixed;
-          top: 250px; /* Adjust the top position as needed */
-          left: 780px; /* Adjust the left position as needed */
-      }
-        
-        /* Style the toggle button */
-        #toggle-button {
-            font-size: 30px;
-            padding: 25px 40px;
-            cursor: pointer;
-            transition: background-color 0.3s; /* Smooth color transition */
-            top: 30px; /* Adjust the top position as needed */
-        }
-        
-        /* Style the audio player if needed */
-        audio {
-            width: 100%;
-            max-width: 400px;
-        }
+        /* Default styles for all devices */
+#audio-container {
+  position: fixed;
+  top: 250px; /* Adjust the top position as needed */
+  left: 780px; /* Adjust the left position as needed */
+}
+
+#toggle-button {
+  font-size: 30px;
+  padding: 25px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth color transition */
+  top: 30px; /* Adjust the top position as needed */
+}
+
+/* Default styles for all devices */
+#audio-container {
+  position: fixed;
+  top: 250px; /* Adjust the top position as needed */
+  left: 780px; /* Adjust the left position as needed */
+}
+
+#toggle-button {
+  font-size: 30px;
+  padding: 25px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth color transition */
+  top: 30px; /* Adjust the top position as needed */
+}
+
+audio {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Styles for desktop devices */
+@media screen and (min-width: 768px) {
+  #audio-container {
+    top: 230px; /* Adjust the top position for desktop devices */
+    left: 90%; /* Center the audio player horizontally */
+    transform: translateX(-50%);
+  }
+  
+  #toggle-button {
+    top: 20px; /* Adjust the top position for desktop devices */
+    right: 20px; /* Adjust the right position for desktop devices */
+  }
+}
+
+/* Styles for mobile devices */
+@media screen and (max-width: 767px) {
+  #audio-container {
+    top: 50px; /* Adjust the top position for mobile devices */
+    left: 50%; /* Center the audio player horizontally */
+    transform: translateX(-50%);
+  }
+  
+  #toggle-button {
+    top: 20px; /* Adjust the top position for mobile devices */
+    left: 50%; /* Center the toggle button horizontally */
+    transform: translateX(-50%);
+  }
+}
 </style>
 </head>
 <body>
