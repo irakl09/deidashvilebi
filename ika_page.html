@@ -236,7 +236,42 @@
         }
       }
     } 
- /* Styles for desktop devices */
+   /* Default styles for all devices */
+#audio-container {
+  position: fixed;
+  top: 250px; /* Adjust the top position as needed */
+  left: 780px; /* Adjust the left position as needed */
+}
+
+#toggle-button {
+  font-size: 30px;
+  padding: 25px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth color transition */
+  top: 30px; /* Adjust the top position as needed */
+}
+
+/* Default styles for all devices */
+#audio-container {
+  position: fixed;
+  top: 250px; /* Adjust the top position as needed */
+  left: 780px; /* Adjust the left position as needed */
+}
+
+#toggle-button {
+  font-size: 30px;
+  padding: 25px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth color transition */
+  top: 30px; /* Adjust the top position as needed */
+}
+
+audio {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Styles for desktop devices */
 @media screen and (min-width: 768px) {
   #audio-container {
     top: 230px; /* Adjust the top position for desktop devices */
