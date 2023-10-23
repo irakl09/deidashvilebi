@@ -324,6 +324,11 @@
         <button onclick="toggleSidebar()">ნახე სხების Birthday</button>
     </div>
     <script>
+        function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+        }
+    </script>
        // Function to display the countdown timer
        function updateTimer() {
         const targetDate = new Date("2024-03-20T00:00:00Z"); // June 9, 2024, 00:00:00 in UTC-4
