@@ -2,7 +2,7 @@
     width: 200px; /* Adjusted width for the frame */
     background: linear-gradient(to bottom, #03f640, #FFCC00, #007BFF,#f80036);
     color: #eb0c0c;
-    height: 100%;
+    height: 23%;
     position: fixed;
     overflow: auto;
     transition: 0.5s;
