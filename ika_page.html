@@ -301,6 +301,75 @@ audio {
     transform: translateX(-50%);
   }
 }
+
+.sidebar {
+    width: 200px; /* Adjusted width for the frame */
+    background: linear-gradient(to bottom, #03f640, #FFCC00, #007BFF,#f80036);
+    color: #eb0c0c;
+    position: absolute;
+    top:300px;
+    left:0px;
+    height: 21%;
+    overflow: auto;
+    transition: 0.5s;
+}
+/* CSS for the close button in the sidebar */
+/* CSS for the close button in the sidebar */
+.sidebar button {
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 400px;
+    left: 200px;
+    width: 20px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s; /* Add a transition for smooth color change */
+}
+
+.sidebar a:hover {
+    color: #ff0000; /* Change the color to red when hovering */
+}
+
+.sidebar.active {
+    width: 0; /* Set width to 0 to hide the sidebar */
+    background-color: #fb06e6; /* Set the same background color to keep it consistent */
+}
+
+/* Style for the sidebar */
+.content {
+    position: relative;
+}
+
+button {
+    background-color: #FF5733;
+    color: #fff; /* Change the text color to your preference */
+    cursor: pointer;
+    width: 100px; /* Adjust the width as needed */
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 250px; /* Adjust the top position as needed */
+    left: 30px; /* Adjust the left position as needed */
+}
+
+
 </style>    
 </head>
 <body>
@@ -347,14 +416,21 @@ audio {
         <div id="timer"></div>
         <h1>09 ივნისი</h1>
       </div>
-    <div class="left-button">
-         <a href="newyear.html" class="pretty-link">ნახე ახალი წელი</a>
-        <a href="lui_page.html" class="pretty-link">ნახე lui's Birthday</a>
-        <a href="mari_page.html" class="pretty-link">ნახე Mari's Birthday</a>
-        <a href="lika_page.html" class="pretty-link">ნახე Lika's Birthday</a>
-        <a href="data_page.html" class="pretty-link">ნახე data's Birthday</a>
-        <a href="countdown.html" class="pretty-link">ნახე anis's Birthday</a>
-    </div>  
+      <div class="sidebar">
+        <ul>
+            <li><a href="gio_page.html">ნახე Gio's Birthday</a></li>
+            <li><a href="lika_page.html">ნახე Lika's Birthday</a></li>
+            <li><a href="mari_page.html">ნახე Mari's Birthday</a></li>
+            <li><a href="ika_page.html">ნახე ika's Birthday</a></li>
+            <li><a href="data_page.html">ნახე data's Birthday</a></li>
+            <li><a href="countdown.html">ნახე anis's Birthday</a></li>
+            <li><a href="lui_page.html" >ნახე lui's Birthday</a></li>
+            <li><a href="newyear.html">ნახე ახალი წელი</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <button onclick="toggleSidebar()">ნახე სხების Birthday</button>
+    </div>
     <div id="audio-container">
       <audio id="audio-player">
         <source src="b.mp3" type="audio/mpeg">
@@ -398,6 +474,13 @@ audio {
       let colorChangeInterval = setInterval(changeButtonColor, 2000);
     </script>   
     <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>   
+    <script>
+
         // Function to display the countdown timer
         function updateTimer() {
           const targetDate = new Date("2024-06-09T00:00:00Z"); // June 9, 2024, 00:00:00 in UTC-4
