@@ -37,9 +37,10 @@
   cursor: pointer;
   border: none;
   cursor: pointer;
-  border-radius: 40%;
+  left: 10px;
+  top: 199px;
+  border-radius: 30%;
   width: 100px; /* Adjust the width as needed */
   height: 40px;
-  top:10px 300px;
   }
   
