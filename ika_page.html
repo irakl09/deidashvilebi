@@ -3,306 +3,338 @@
     <title>ika's Page</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
      <link rel="stylesheet" type="text/css" href="custom.css">
-      <link rel="stylesheet" type="text/css" href="link.css">
-     <script src="script.js"></script>
      <link rel="icon" href="logo.png"/>
      <meta name="virwport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="link.css">
+     <script src="script.js"></script>
     <style>
-    body {
-        background: linear-gradient(to bottom,#77DD77,#333333,red, #4CAF50);
-    }
-    @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+      /* Style for the sidebar */
 
-    $font: 'Lato', sans-serif;
-    $big: 'Montserrat', sans-serif;
-    
-    $red: #EF2F3C;
-    $white: #F6F4F3;
-    $blue: #276FBF;
-    $dark: #183059;
-    $yellow: #F0A202;
-    
-    $star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-      
-    html {
-      display: grid;
-      min-height: 100%;
-    }
-    
-    body {
-      display: grid;
-      background: $dark;
-    }
-    
-    .container {
-      position: relative;
-      margin: auto;
-      overflow: hidden;
-      width: 650px;
-      height: 480px;
-    }
-    
-    h1 {
-      font-family: $font;
-      text-align: center;
-      margin-top: 2em;
-      font-size: 1em;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      color: $white;
-    }
-    
-    #timer {
-      color: $white;
-      text-align: center;
-      text-transform: uppercase;
-      font-family: $font;
-      font-size: .7em;
-      letter-spacing: 5px;
-      margin-top: 25%;
-    }
-    
-    .days, .hours, .minutes, .seconds {
-      display: inline-block;
-      padding: 20px;
-      width: 100px;
-      border-radius: 5px;
-    }
-    
-    .days {
-      background: $red;
-    }
-    
-    .hours {
-      background: $white;
-      color: $dark;
-    }
-    
-    .minutes {
-      background: $blue;
-    }
-    
-    .seconds {
-      background: $yellow;
-      .numbers {
-       
-      }
-    }
-    
-    .numbers {
-      font-family: $big;
-      color: $dark;
-      font-size: 4em;
-    }
-    
-    .white {
-      position: absolute;
-      background: $white;
-      height: 85px;
-      width: 75px;
-      left: 30%;
-      top: 2%;
-      .triangle {
-        border-bottom: 14px solid $white;
-      }
-      .string {
-        background: $white;
-        border: 1px solid $white;
-      }
-    }
-    
-    .red {
-      position: absolute;
-      background: $red;
-      left: 18%;
-      top: 9%;
-      height: 65px;
-      width: 70px;
-      .triangle {
-        border-bottom: 14px solid $red;
-      }
-      .string {
-        background: $red;
-        border: 1px solid $red;
-      }
-    }
-    
-    .blue {
-      position: absolute;
-      background: $blue;
-      height: 80px;
-      width: 80px;
-      left: 60%;
-      top: 5%;
-      .triangle {
-        border-bottom: 14px solid $blue;
-      }
-      .string {
-        background: $blue;
-        border: 1px solid $blue;
-      }
-    }
-    
-    .balloon {
-      border: 1px solid #000;
-      border-radius: 50% 50% 50% 50%/ 40% 40% 60% 60%;
-      z-index: 2;
-    }
-    
-    .eye {
-      position: absolute;
-      width: 7px;
-      height: 7px;
-      top: 40%;
-      left: 22%;
-      background: #000;
-      border-radius: 50%;
-      &:after {
-        content: '';
-        left: 35px;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #000;
-        position: absolute;
-      }
-    }
-    
-    .mouth {
-      position:absolute;
-      top: 45%;
-      left: 43%;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-    }
-    
-    .happy {
-      border: 2px solid;
-      border-color: transparent #000 #000 transparent;
-      transform: rotate(45deg);
-    }
-    
-    .triangle {
-      position: absolute;
-      left: 40%;
-      bottom: -10%;
-      width: 0;
-        height: 0;
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-    }
-    
-    .string {
-      position: absolute;
-      height: 70px;
-      width: 1px;
-      left: 48%;
-      top: 100%;
-      z-index: -1;
-    }
-    
-    .star {
-      width: 20px;
-      height: 20px;
-      background: $white;
-      -webkit-clip-path: $star;
-      clip-path: $star;
-    }
-    
-    .star-red {
-      width: 30px;
-      height: 30px;
-      margin-left: 51px;
-      margin-top: -5px;
-      background: $red;
-      -webkit-clip-path: $star;
-      clip-path: $star;
-    }
-    
-    footer {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      text-transform: uppercase;
-      padding: 10px;
-      font-family: $font;
-      font-size: 0.7em;
-      p {
-        letter-spacing: 3px;
-        color: $red;
-      }
-      a {
-        color: $white;
-        text-decoration: none;
-        &:hover {
-          color: $blue;
-        }
-      }
-    } 
-   /* Default styles for all devices */
-#audio-container {
+.sidebar {
+  width: 200px; /* Adjusted width for the frame */
+  background: linear-gradient(to bottom, #03f640, #FFCC00, #007BFF,#f80036);
+  color: #eb0c0c;
+  height: 100%;
   position: fixed;
-  top: 250px; /* Adjust the top position as needed */
-  left: 780px; /* Adjust the left position as needed */
+  overflow: auto;
+  transition: 0.5s;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s; /* Add a transition for smooth color change */
+}
+
+.sidebar a:hover {
+  color: #ff0000; /* Change the color to red when hovering */
+}
+
+.sidebar.active {
+  width: 0; /* Set width to 0 to hide the sidebar */
+  background-color: #fb06e6; 
+}
+button {
+  background-color: #FF5733;
+  color: #fff; /* Change the text color to your preference */
+cursor: pointer;
+border: none;
+cursor: pointer;
+width: 100px; /* Adjust the width as needed */
+height: 40px;
+}
+
+
+
+body {
+  background: linear-gradient(to bottom,#77DD77,#333333,red, #4CAF50);
+}
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+
+$font: 'Lato', sans-serif;
+$big: 'Montserrat', sans-serif;
+
+$red: #EF2F3C;
+$white: #F6F4F3;
+$blue: #276FBF;
+$dark: #183059;
+$yellow: #F0A202;
+
+$star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+html {
+display: grid;
+min-height: 100%;
+}
+
+body {
+display: grid;
+background: $dark;
+}
+
+.container {
+position: relative;
+margin: auto;
+overflow: hidden;
+width: 650px;
+height: 480px;
+}
+
+h1 {
+font-family: $font;
+text-align: center;
+margin-top: 2em;
+font-size: 1em;
+text-transform: uppercase;
+letter-spacing: 5px;
+color: $white;
+}
+
+#timer {
+color: $white;
+text-align: center;
+text-transform: uppercase;
+font-family: $font;
+font-size: .7em;
+letter-spacing: 5px;
+margin-top: 25%;
+}
+
+.days, .hours, .minutes, .seconds {
+display: inline-block;
+padding: 20px;
+width: 100px;
+border-radius: 5px;
+}
+
+.days {
+background: $red;
+}
+
+.hours {
+background: $white;
+color: $dark;
+}
+
+.minutes {
+background: $blue;
+}
+
+.seconds {
+background: $yellow;
+.numbers {
+ 
+}
+}
+
+.numbers {
+font-family: $big;
+color: $dark;
+font-size: 4em;
+}
+
+.white {
+position: absolute;
+background: $white;
+height: 85px;
+width: 75px;
+left: 30%;
+top: 2%;
+.triangle {
+  border-bottom: 14px solid $white;
+}
+.string {
+  background: $white;
+  border: 1px solid $white;
+}
+}
+
+.red {
+position: absolute;
+background: $red;
+left: 18%;
+top: 9%;
+height: 65px;
+width: 70px;
+.triangle {
+  border-bottom: 14px solid $red;
+}
+.string {
+  background: $red;
+  border: 1px solid $red;
+}
+}
+
+.blue {
+position: absolute;
+background: $blue;
+height: 80px;
+width: 80px;
+left: 60%;
+top: 5%;
+.triangle {
+  border-bottom: 14px solid $blue;
+}
+.string {
+  background: $blue;
+  border: 1px solid $blue;
+}
+}
+
+.balloon {
+border: 1px solid #000;
+border-radius: 50% 50% 50% 50%/ 40% 40% 60% 60%;
+z-index: 2;
+}
+
+.eye {
+position: absolute;
+width: 7px;
+height: 7px;
+top: 40%;
+left: 22%;
+background: #000;
+border-radius: 50%;
+&:after {
+  content: '';
+  left: 35px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+}
+}
+
+.mouth {
+position:absolute;
+top: 45%;
+left: 43%;
+width: 7px;
+height: 7px;
+border-radius: 50%;
+}
+
+.happy {
+border: 2px solid;
+border-color: transparent #000 #000 transparent;
+transform: rotate(45deg);
+}
+
+.triangle {
+position: absolute;
+left: 40%;
+bottom: -10%;
+width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.string {
+position: absolute;
+height: 70px;
+width: 1px;
+left: 48%;
+top: 100%;
+z-index: -1;
+}
+
+.star {
+width: 20px;
+height: 20px;
+background: $white;
+-webkit-clip-path: $star;
+clip-path: $star;
+}
+
+.star-red {
+width: 30px;
+height: 30px;
+margin-left: 51px;
+margin-top: -5px;
+background: $red;
+-webkit-clip-path: $star;
+clip-path: $star;
+}
+
+footer {
+position: fixed;
+bottom: 0;
+right: 0;
+text-transform: uppercase;
+padding: 10px;
+font-family: $font;
+font-size: 0.7em;
+p {
+  letter-spacing: 3px;
+  color: $red;
+}
+a {
+  color: $white;
+  text-decoration: none;
+  &:hover {
+    color: $blue;
+  }
+}
+} 
+/* Default styles for all devices */
+#audio-container {
+position: fixed;
+top: 250px; /* Adjust the top position as needed */
+left: 780px; /* Adjust the left position as needed */
 }
 
 #toggle-button {
-  font-size: 30px;
-  padding: 25px 40px;
-  cursor: pointer;
-  transition: background-color 0.3s; /* Smooth color transition */
-  top: 30px; /* Adjust the top position as needed */
+font-size: 30px;
+padding: 25px 40px;
+cursor: pointer;
+transition: background-color 0.3s; /* Smooth color transition */
+top: 30px; /* Adjust the top position as needed */
 }
 
 /* Default styles for all devices */
 #audio-container {
-  position: fixed;
-  top: 250px; /* Adjust the top position as needed */
-  left: 780px; /* Adjust the left position as needed */
+position: fixed;
+top: 250px; /* Adjust the top position as needed */
+left: 780px; /* Adjust the left position as needed */
 }
 
 #toggle-button {
-      font-size: 25px;
-      padding: 20px 30px;
-      cursor: pointer;
-      transition: background-color 0.3s; /* Smooth color transition */
-      top: 30px; /* Adjust the top position as needed */
+font-size: 25px;
+padding: 20px 30px;
+cursor: pointer;
+transition: background-color 0.3s; /* Smooth color transition */
+top: 30px; /* Adjust the top position as needed */
 }
 
 audio {
-  width: 100%;
-  max-width: 400px;
+width: 100%;
+max-width: 400px;
 }
-
-/* Styles for desktop devices */
-@media screen and (min-width: 768px) {
-  #audio-container {
-    top: 230px; /* Adjust the top position for desktop devices */
-    left: 90%; /* Center the audio player horizontally */
-    transform: translateX(-50%);
-  }
-  
-  #toggle-button {
-    top: 20px; /* Adjust the top position for desktop devices */
-    right: 20px; /* Adjust the right position for desktop devices */
-  }
-}
-
 /* Styles for mobile devices */
 @media screen and (max-width: 767px) {
-  #audio-container {
-    top: 50px; /* Adjust the top position for mobile devices */
-    left: 50%; /* Center the audio player horizontally */
-    transform: translateX(-50%);
-  }
-  
-  #toggle-button {
-    top: 20px; /* Adjust the top position for mobile devices */
-    left: 50%; /* Center the toggle button horizontally */
-    transform: translateX(-50%);
-  }
+#audio-container {
+top: 50px; /* Adjust the top position for mobile devices */
+left: 50%; /* Center the audio player horizontally */
+transform: translateX(-50%);
 }
+
+#toggle-button {
+top: 20px; /* Adjust the top position for mobile devices */
+left: 50%; /* Center the toggle button horizontally */
+transform: translateX(-50%);
+}
+
 </style>    
 </head>
 <body>
@@ -350,6 +382,7 @@ audio {
         <h1>09 ივნისი</h1>
       </div>
       <div class="sidebar">
+        <button id="closeBtn" onclick="toggleSidebar()">დახურვა</button>
         <ul>
             <li><a href="gio_page.html">ნახე Gio's Birthday</a></li>
             <li><a href="lika_page.html">ნახე Lika's Birthday</a></li>
@@ -371,7 +404,12 @@ audio {
       </audio>
       <button id="toggle-button" style="background-color: blue; color: white;">Play</button>
     </div>
-  
+     <script>
+      function toggleSidebar() {
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+    }
+  </script>    
     <script>
       const audioPlayer = document.getElementById('audio-player');
       const toggleButton = document.getElementById('toggle-button');
