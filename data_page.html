@@ -3,6 +3,7 @@
     <title>data's Page</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="link.css">
     </style>
     <style>
         body {
@@ -344,13 +345,20 @@ audio {
         <div id="timer"></div>
         <h1>9 აგვისტო</h1>
       </div>
-    <div class="left-button">
-        <a href="lika_page.html" class="pretty-link">ნახე Lika's Birthday</a>
-        <a href="lui_page.html" class="pretty-link">ნახე lui's Birthday</a>
-        <a href="mari_page.html" class="pretty-link">ნახე Mari's Birthday</a>
-        <a href="ika_page.html" class="pretty-link">ნახე  ika's Birthday</a>
-        <a href="countdown.html" class="pretty-link">ნახე anis's Birthday</a>
-        <a href="gio_page.html" class="pretty-link">ნახე Gio's Birthday</a>
+     <div class="sidebar">
+        <button id="closeBtn" onclick="toggleSidebar()">დახურვა</button>
+        <ul>
+            <li><a href="gio_page.html">ნახე Gio's Birthday</a></li>
+            <li><a href="lika_page.html">ნახე Lika's Birthday</a></li>
+            <li><a href="mari_page.html">ნახე Mari's Birthday</a></li>
+            <li><a href="ika_page.html">ნახე ika's Birthday</a></li>
+            <li><a href="countdown.html">ნახე anis's Birthday</a></li>
+            <li><a href="lui_page.html" >ნახე lui's Birthday</a></li>
+            <li><a href="newyear.html">ნახე ახალი წელი</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <button onclick="toggleSidebar()">ნახე სხების Birthday</button>
     </div>
     <div id="audio-container">
       <audio id="audio-player">
@@ -359,6 +367,12 @@ audio {
       </audio>
       <button id="toggle-button" style="background-color: blue; color: white;">Play</button>
     </div>
+      <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>   
   
     <script>
       const audioPlayer = document.getElementById('audio-player');
