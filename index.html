@@ -3,6 +3,7 @@
 <head>
     <title>ანის</title>
    <link rel="stylesheet" type="text/css" href="styles.css">
+   <link rel="stylesheet" type="text/css" href="link.css">
    <link rel="stylesheet" type="text/css" href="custom.css">
    <style>
     body {
@@ -349,13 +350,20 @@ audio {
 </style>
 </head>
 <body>
-    <div class="left-button">
-             <a href="newyear.html" class="pretty-link">ნახე ახალი წელი</a>
-            <a href="lui_page.html" class="pretty-link">ნახე lui's Birthday</a>
-            <a href="mari_page.html" class="pretty-link">ნახე Mari's Birthday</a>
-            <a href="lika_page.html" class="pretty-link">ნახე Lika's Birthday</a>
-            <a href="gio_page.html" class="pretty-link">ნახე Gio's Birthday</a>
-            <a href="data_page.html" class="pretty-link">ნახე Data's Birthday</a>
+   <div class="sidebar">
+        <button id="closeBtn" onclick="toggleSidebar()">დახურვა</button>
+        <ul>
+            <li><a href="gio_page.html">ნახე Gio's Birthday</a></li>
+            <li><a href="lika_page.html">ნახე Lika's Birthday</a></li>
+            <li><a href="mari_page.html">ნახე Mari's Birthday</a></li>
+            <li><a href="ika_page.html">ნახე ika's Birthday</a></li>
+            <li><a href="data_page.html">ნახე data's Birthday</a></li>
+            <li><a href="lui_page.html" >ნახე lui's Birthday</a></li>
+            <li><a href="newyear.html">ნახე ახალი წელი</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <button onclick="toggleSidebar()">ნახე სხების Birthday</button>
     </div>
     <div id="audio-container">
       <audio id="audio-player">
@@ -364,6 +372,12 @@ audio {
       </audio>
       <button id="toggle-button" style="background-color: blue; color: white;">Play</button>
     </div>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>   
   
     <script>
       const audioPlayer = document.getElementById('audio-player');
