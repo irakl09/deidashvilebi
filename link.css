@@ -1,51 +1,49 @@
 .sidebar {
-    width: 200px; /* Adjusted width for the frame */
-    background: linear-gradient(to bottom, #03f640, #FFCC00, #007BFF,#f80036);
-    color: #eb0c0c;
-    height: 26%;
-    position: fixed;
-    overflow: auto;
-    transition: 0.5s;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    padding: 10px;
-  }
-  
-  .sidebar a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s; /* Add a transition for smooth color change */
-  }
-  
-  .sidebar a:hover {
-    color: #ff0000; /* Change the color to red when hovering */
-  }
-  
-  .sidebar.active {
-    width: 0; /* Set width to 0 to hide the sidebar */
-    background-color: #fb06e6; 
-  }
-  button {
-    background-color: #FF5733;
-    color: #fff; /* Change the text color to your preference */
-  cursor: pointer;
-  border: none;
-  cursor: pointer;
-  border-radius: 30%;
-  width: 200px; /* Adjust the width as needed */
-  height: 80px;
-  }
-     position: relative; /* Ensure the container has a positioning context */
-  }
+  width: 200px; /* Adjusted width for the frame */
+  background: linear-gradient(to bottom, #03f640,#f80036);
+  color: #eb0c0c;
+  height: 26%;
+  position: fixed;
+  overflow: auto;
+  transition: 0.5s;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s; /* Add a transition for smooth color change */
+}
+
+.sidebar a:hover {
+  color: #ff0000; /* Change the color to red when hovering */
+}
+
+.sidebar.active {
+  width: 0; /* Set width to 0 to hide the sidebar */
+  background-color: #fb06e6; 
+}
+button {
+  background-color: #FF5733;
+  color: #fff; /* Change the text color to your preference */
+cursor: pointer;
+border: none;
+cursor: pointer;
+border-radius: 30%;
+width: 200px; /* Adjust the width as needed */
+height: 80px;
+}
 
   #birthdayButton {
-      position: absolute;
-      top: 300px; /* Adjust the top position as needed */
-      left: 10px; /* Adjust the left position as needed */
-  }
+    position: absolute;
+    top: 500px; /* Set the initial top position as needed */
+    left: 10px; /* Set the initial left position as needed */
+}
