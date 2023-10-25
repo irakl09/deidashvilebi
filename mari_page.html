@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
     <link rel="stylesheet" type="text/css" href="link.css">
+    <script src="script.js"></script>
     </style>
     <style>
     body {
@@ -371,7 +372,12 @@ audio {
       </audio>
       <button id="toggle-button" style="background-color: blue; color: white;">Play</button>
     </div>
-  
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>   
     <script>
       const audioPlayer = document.getElementById('audio-player');
       const toggleButton = document.getElementById('toggle-button');
