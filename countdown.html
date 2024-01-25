@@ -359,6 +359,7 @@ audio {
             <li><a href="lika_page.html">ნახე Lika's Birthday</a></li>
             <li><a href="mari_page.html">ნახე Mari's Birthday</a></li>
             <li><a href="data_page.html">ნახე data's Birthday</a></li>
+            <li><a href="countdown.html">ნახე anis's Birthday</a></li>
             <li><a href="lui_page.html" >ნახე lui's Birthday</a></li>
             <li><a href="newyear.html">ნახე ახალი წელი</a></li>
         </ul>
@@ -426,12 +427,14 @@ audio {
             // Calculate the time difference in milliseconds
             const diff = targetDate - now;
       
-            if (diff <= 0) {
-              // The countdown has ended
-              document.getElementById("timer").innerHTML = "გილოცავ ან დაბადების დღეს🐰🐰💖";
+                 if (diff <= 0) {
+             // The countdown has ended
+              var timerElement = document.getElementById("timer");
+             timerElement.innerHTML = "გილოცავ ანნ დაბადების დღეს🐰🐰💖";
+             timerElement.style.fontSize = "50px"; // Adjust the font size as needed
               clearInterval(timer);
               return;
-            }
+              }
       
             // Calculate days, hours, minutes, and seconds
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
