@@ -427,12 +427,14 @@ audio {
             // Calculate the time difference in milliseconds
             const diff = targetDate - now;
       
-            if (diff <= 0) {
-              // The countdown has ended
-              document.getElementById("timer").innerHTML = "გილოცავ ანნ დაბადების 🐰🐰💖";
+                 if (diff <= 0) {
+             // The countdown has ended
+              var timerElement = document.getElementById("timer");
+             timerElement.innerHTML = "გილოცავ ანნ დაბადების დღეს🐰🐰💖";
+             timerElement.style.fontSize = "50px"; // Adjust the font size as needed
               clearInterval(timer);
               return;
-            }
+              }
       
             // Calculate days, hours, minutes, and seconds
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
